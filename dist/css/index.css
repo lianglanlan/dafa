@@ -1,0 +1,113 @@
+.login-input-wrap .username:before, .login-input-wrap .mobile:before {
+  background-image: url('../images/sprite/sprite.png?v=1fad3e95');
+  background-image: -webkit-image-set(url('../images/sprite/sprite.png?v=1fad3e95') 1x, url('../images/sprite/sprite@2x.png?v=81fa5c78') 2x);
+  background-size: 69px 46px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  word-break: normal;
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login-info-wrap {
+  padding: 12px 22px 50px;
+  background: url(../images/bg01.png?v=d1a9eca7) no-repeat bottom center #2c5d9f;
+  background-size: 100% 45px;
+}
+
+.login-info-wrap img {
+  display: block;
+  margin: 0 auto 15px;
+  width: 65px;
+  height: auto;
+}
+
+.login-info-wrap p {
+  line-height: 21px;
+  font-size: 12px;
+  color: #fff;
+  text-indent: 1.8em;
+  text-align: justify;
+}
+
+.login-input-wrap {
+  padding: 47px 60px 0;
+}
+
+.login-input-wrap input {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3277c2), color-stop(0%, transparent));
+  background-image: -webkit-linear-gradient(bottom, #3277c2 50%, transparent 0%);
+  background-image: linear-gradient(to top, #3277c2 50%, transparent 0%);
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  color: #333;
+  line-height: 29px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login-input-wrap input::-webkit-input-placeholder {
+  color: #ced0d7;
+}
+
+.login-input-wrap .login-input {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 47px;
+}
+
+.login-input-wrap .login-input:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.login-input-wrap .username:before {
+  background-position: -26px 0px;
+  width: 19px;
+  height: 22px;
+}
+
+.login-input-wrap .mobile:before {
+  background-position: 0px 0px;
+  width: 18px;
+  height: 25px;
+}
+
+.login-input-wrap .btn {
+  display: block;
+  text-align: center;
+  line-height: 45px;
+  background-color: #3277c2;
+  color: #fff;
+  border-radius: 45px;
+}
+
+.login-input-wrap .name {
+  margin-top: 30px;
+  line-height: 23px;
+  text-align: center;
+  color: #ced0d7;
+  font-size: 13px;
+}
