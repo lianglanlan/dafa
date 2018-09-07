@@ -6,11 +6,137 @@
 	<title>发生·发声</title>
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="./css/swiper.css">
 	<link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-	<img src="./images/logo02.png" alt="">
+	<div class="index-header">
+		<img src="./images/logo02.png" alt="" class="logo">
+		<a href="#" class="catalog"></a>
+	</div>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<a class="swiper-slide" href="#">
+            <img src="./images/temp/01.png" alt="">
+            <div class="slider-news-wrap">
+                <i class="slider-news-icon"></i>
+                <div class="slider-news-content">
+                    <p>郑是的话哈酒案件和规划局啊哈哈哈哈哈郑是的话哈酒案件和规划局啊哈哈哈哈哈</p>
+                    <p>2018/03/12</p>
+                </div>
+            </div>
+        </a>
+			<a class="swiper-slide" href="#">
+            <img src="./images/temp/01.png" alt="">
+            <div class="slider-news-wrap">
+                <i class="slider-news-icon"></i>
+                <div class="slider-news-content">
+                    <p>郑是的话哈酒案件和规划局啊哈哈哈哈哈郑是的话哈酒案件和规划局啊哈哈哈哈哈</p>
+                    <p>2018/03/12</p>
+                </div>
+            </div>
+        </a>
+			<a class="swiper-slide" href="#">
+            <img src="./images/temp/01.png" alt="">
+            <div class="slider-news-wrap">
+                <i class="slider-news-icon"></i>
+                <div class="slider-news-content">
+                    <p>郑是的话哈酒案件和规划局啊哈哈哈哈哈郑是的话哈酒案件和规划局啊哈哈哈哈哈</p>
+                    <p>2018/03/12</p>
+                </div>
+            </div>
+        </a>
+		</div>
+		<!-- 分页器 -->
+		<div class="swiper-pagination"></div>
+	</div>
+	<ul class="list1">
+		<li>
+			<div class="content-wrap">
+				<img src="./images/temp/02.png" alt="" class="content-img">
+				<div class="content">
+					<h3 class="tit">大发地产</h3>
+					<p class="desc">安静和对应及时还是给大家建设大街嘎哈和即使是该公司就会更加跟海哈哈...</p>
+					<p class="date">2018/09/10</p>
+				</div>
+			</div>
+			<div class="infor-wrap">
+				<span class="read"><em>123</em>人已阅读</span>
+				<span class="like">1232</span>
+				<span class="comment">1232</span>
+			</div>
+		</li>
+		<li>
+			<div class="content-wrap">
+				<img src="./images/temp/02.png" alt="" class="content-img">
+				<div class="content">
+					<h3 class="tit">安静和对应及时还是给大家建设</h3>
+					<p class="desc">安静和对应及时还是给大家建设大街嘎哈和即使是该公司就会更加跟海哈哈...</p>
+					<p class="date">2018/09/10</p>
+				</div>
+			</div>
+			<div class="infor-wrap">
+				<span class="read"><em>123</em>人已阅读</span>
+				<span class="like">1232</span>
+				<span class="comment">1232</span>
+			</div>
+		</li>
+		<li>
+			<div class="content-wrap">
+				<img src="./images/temp/02.png" alt="" class="content-img">
+				<div class="content">
+					<h3 class="tit">安静和对应及时还是给大家建设</h3>
+					<p class="desc">安静和对应及时还是给大家建设大街嘎哈和即使是该公司就会更加跟海哈哈...</p>
+					<p class="date">2018/09/10</p>
+				</div>
+			</div>
+			<div class="infor-wrap">
+				<span class="read"><em>123</em>人已阅读</span>
+				<span class="like">1232</span>
+				<span class="comment">1232</span>
+			</div>
+		</li>
+	</ul>
+	<div class="overlay" style="display: none">
+		<div class="pop-catalog">
+			<a href="#" class="close"></a>
+			<ul class="catalog-list">
+				<li><a href="#" class="home cur">发声</a></li>
+				<li><a href="#" class="find">发现宝典</a></li>
+				<li><a href="#" class="study">大学霸</a></li>
+				<li><a href="#" class="car">积分购物筐</a></li>
+				<li><a href="#" class="user">个人中心</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="./js/swiper-3.4.0.min.js"></script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+			loop: true,
+			autoplay: 5000,
+			// 如果需要分页器
+			pagination: '.swiper-pagination',
+			autoplayDisableOnInteraction: false,
+		});
+		var catalogBtn = document.querySelector('.catalog');
+		var overlay = document.querySelector('.overlay');
+		var closeBtn = document.querySelector('.overlay .close');
+		catalogBtn.addEventListener('click', function() {
+			overlay.style.display = 'block';
+		})
+		overlay.addEventListener('touchmove', function(e) {
+			e.preventDefault();
+		})
+		overlay.addEventListener('click', function(e) {
+			if (e.target === this) {
+				this.style.display = 'none'
+			}
+		})
+		closeBtn.addEventListener('click', function() {
+			overlay.style.display = 'none'
+		})
+	</script>
 </body>
 
 </html>
