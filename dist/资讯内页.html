@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<!--评论-->
-	<div class="overlay">
+	<div class="overlay" style="display: none">
 		<div class="pop-comment" style="display: none">
 			<a href="#" class="close"></a>
 			<div class="header">
@@ -111,7 +111,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="pop-comment-input">
+		<div class="pop-comment-input" style="display: none">
 			<a href="#" class="close"></a>
 			<div class="header">
 				<span class="header-reply">回复</span>
@@ -138,6 +138,20 @@
 			if ($(e.target).parents('.pop-comment-wrap').length == 0) {
 				e.preventDefault();
 			}
+		})
+		//点击事件
+		$('.news-footer .comment').on('click', function() {
+			$('.overlay').show()
+			$('.pop-comment').show()
+			myScroll.refresh()
+		})
+		$('.pop-comment .reply').on('click', function() {
+			$('.pop-comment').hide()
+			$('.pop-comment-input').show()
+		})
+		$('.close').on('click', function() {
+			$(this).parent().hide()
+			$('.overlay').hide()
 		})
 	</script>
 </body>
