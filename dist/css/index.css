@@ -287,10 +287,6 @@ em {
 }
 
 .swiper-container .slider-news-wrap {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   height: 59px;
   background: url(../images/bg/bg02.png?v=788665d8) no-repeat center;
   background-size: 100% 90px;
@@ -1089,6 +1085,7 @@ em {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-width: 0;
   color: #343d44;
 }
 
@@ -1104,6 +1101,11 @@ em {
   margin-top: 14px;
   line-height: 27px;
   font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  white-space: nowrap;
+  display: block;
 }
 
 .find-list .content {
